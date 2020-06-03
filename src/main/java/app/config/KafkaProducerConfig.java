@@ -1,5 +1,6 @@
 package app.config;
 
+import app.model.EGarantPolicy;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.LongSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -34,13 +35,13 @@ public class KafkaProducerConfig {
     }
 
     @Bean
-    public ProducerFactory<Long, StarshipDto> producerStarshipFactory() {
+    public ProducerFactory<Long, EGarantPolicy> producerStarshipFactory() {
         return new DefaultKafkaProducerFactory<>(producerConfigs());
     }
 
     @Bean
-    public KafkaTemplate<Long, StarshipDto> kafkaTemplate() {
-        KafkaTemplate<Long, StarshipDto> template = new KafkaTemplate<>(producerStarshipFactory());
+    public KafkaTemplate<Long, EGarantPolicy> kafkaTemplate() {
+        KafkaTemplate<Long, EGarantPolicy> template = new KafkaTemplate<>(producerStarshipFactory());
         template.setMessageConverter(new StringJsonMessageConverter());
         return template;
     }
