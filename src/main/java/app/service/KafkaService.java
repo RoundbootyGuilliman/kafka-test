@@ -1,6 +1,7 @@
 package app.service;
 
 import app.model.EGarantPolicy;
+import app.model.Vehicle2;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,13 +19,16 @@ import java.util.Scanner;
 public class KafkaService {
 
     private final KafkaTemplate<Long, EGarantPolicy> kafkaTemplate;
+    private final KafkaTemplate<Long, Vehicle2> kafkaTemplate2;
     private final ObjectMapper objectMapper;
 
     @Autowired
     public KafkaService(KafkaTemplate<Long, EGarantPolicy> kafkaTemplate,
+                        KafkaTemplate<Long, Vehicle2> kafkaTemplate2,
                         ObjectMapper objectMapper) {
         this.kafkaTemplate = kafkaTemplate;
         this.objectMapper = objectMapper;
+        this.kafkaTemplate2 = kafkaTemplate2;
     }
 
     @PostConstruct
@@ -34,13 +38,20 @@ public class KafkaService {
         kafkaTemplate.send("egarant.test", policy);
     }
 
+//    @PostConstruct
+//    public void produce() throws IOException {
+//        Vehicle2 policy = objectMapper.readValue(new StringReader(readFile("Vehicle.json")), Vehicle2.class);
+//        System.out.println("<= sending " + writeValueAsString(policy));
+//        kafkaTemplate2.send("egarant.test", policy);
+//    }
+
     private String readFile(String path) {
         InputStream is = this.getClass().getClassLoader().getResourceAsStream(path);
         Scanner s = new Scanner(is, "UTF-8").useDelimiter("\\A");
         return s.hasNext() ? s.next() : "";
     }
 
-    private String writeValueAsString(EGarantPolicy dto) {
+    private String writeValueAsString(Object dto) {
         try {
             return objectMapper.writeValueAsString(dto);
         } catch (JsonProcessingException e) {

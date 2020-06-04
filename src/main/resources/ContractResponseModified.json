@@ -1,10 +1,8 @@
 {
     "sysInfo": {
-        "timeStamp": 1582013206597,
-        "infId": 2,
-        "version": "v1",
         "method": "GetEgarantPolicy",
         "ticketId": "3585C474-A817-4F58-A559-51161E54D5D2",
+        "kek": 234,
         "comment": "Любой текст длинной до 1000 символов",
         "parameters": {
             "insuranceContractId": "3585c474-a817-4f58-a559-51161e54d5d2 "

@@ -1,6 +1,7 @@
 package app.config;
 
 import app.model.EGarantPolicy;
+import app.model.Vehicle2;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.LongSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -42,6 +43,18 @@ public class KafkaProducerConfig {
     @Bean
     public KafkaTemplate<Long, EGarantPolicy> kafkaTemplate() {
         KafkaTemplate<Long, EGarantPolicy> template = new KafkaTemplate<>(producerStarshipFactory());
+        template.setMessageConverter(new StringJsonMessageConverter());
+        return template;
+    }
+
+    @Bean
+    public ProducerFactory<Long, Vehicle2> producerVehicleFactory() {
+        return new DefaultKafkaProducerFactory<>(producerConfigs());
+    }
+
+    @Bean
+    public KafkaTemplate<Long, Vehicle2> kafkaTemplateVehicle() {
+        KafkaTemplate<Long, Vehicle2> template = new KafkaTemplate<>(producerVehicleFactory());
         template.setMessageConverter(new StringJsonMessageConverter());
         return template;
     }
