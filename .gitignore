@@ -4,6 +4,7 @@ target/
 mvnw*
 !**/src/main/**
 !**/src/test/**
+!src/main/resources/apache-zookeeper-3.6.1-bin
 
 ### STS ###
 .apt_generated
