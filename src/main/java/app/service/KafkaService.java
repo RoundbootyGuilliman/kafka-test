@@ -8,6 +8,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.PostConstruct;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringReader;
 
@@ -27,7 +28,7 @@ public class KafkaService {
     }
 
     @PostConstruct
-    public void produce() {
+    public void produce() throws IOException {
         EGarantPolicy policy = objectMapper.readValue(new StringReader(readFile("ContractResponseModified.json")), EGarantPolicy.class);
         System.out.println("<= sending " + writeValueAsString(policy));
         kafkaTemplate.send("egarant.test", policy);
