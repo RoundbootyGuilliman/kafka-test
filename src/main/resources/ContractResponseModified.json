@@ -1,0 +1,216 @@
+{
+    "sysInfo": {
+        "timeStamp": 1582013206597,
+        "infId": 2,
+        "version": "v1",
+        "method": "GetEgarantPolicy",
+        "ticketId": "3585C474-A817-4F58-A559-51161E54D5D2",
+        "comment": "Любой текст длинной до 1000 символов",
+        "parameters": {
+            "insuranceContractId": "3585c474-a817-4f58-a559-51161e54d5d2 "
+        },
+        "errors": {
+            "code": 0,
+            "internalCode": 0,
+            "message": "Запрос выполнен успешно"
+        }
+    },
+    "responseData": {
+        "requestId": "9da481db-54c8-48ee-8b8f-4178c2d46080",
+        "responseId": "0d845c51-b0d8-4461-b95d-3dee6972282a",
+        "lastModified": "2019-12-06T15:35:59.716Z",
+        "processingResult": {
+            "insuranceContract": {
+                "requestType": "Contract",
+                "internalIds": {
+                    "cisContractId": "1f0a0998-28af-47d1-ab36-8ec1fc0952d6",
+                    "cisVersionId": 0,
+                    "contractId": "02b0b5a8-bc26-4b4c-8d37-2f084bd0a1ae"
+                },
+                "insuranceContract": {
+                    "contractSeries": "XXX",
+                    "contractNumber": 4564545656,
+                    "contractClosingDate": "2019-12-19T15:35:59.716Z",
+                    "contractEffectiveDate": "2019-12-24T00:00:00.000Z",
+                    "expirationDate": "2020-12-23T23:59:59.590Z",
+                    "revisionDate": "2020-11-13T15:10:56.000Z",
+                    "classifiedIndicator": false,
+                    "closingType": 3,
+                    "driverLimitIndicator": true,
+                    "utilisationPeriod1Begin": "2019-12-24T00:00:00.000Z",
+                    "utilisationPeriod1End": "2020-03-31T00:00:00.000Z",
+                    "utilisationPeriod2Begin": "2020-09-01T00:00:00.000Z",
+                    "utilisationPeriod2End": "2020-11-30T00:00:00.000Z",
+                    "registrationTransitIndicator": false,
+                    "purposeCode": 1,
+                    "primaryDrivingArea": "0c5b2444-70a0-4932-980c-b4dc0d3f02b5",
+                    "trailerIndicator": false,
+                    "premiumAmount": 5160.96,
+                    "premiumSynchDate": "2019-12-19T00:00:00.000Z",
+                    "rates": {
+                        "tb": 2800,
+                        "kt": 2,
+                        "kbm": 1,
+                        "ko": 1,
+                        "kvs": 0.96,
+                        "km": 1.2,
+                        "ks": 0.8,
+                        "kn": 1,
+                        "kpr": 1.16
+                    },
+                    "stoas": [
+                        {
+                            "fullName": "СТО ХХI ВЕК",
+                            "address": "г.Москва, пр-кт Ленина, д.1"
+                        }
+                    ]
+                },
+                "vehicle": {
+                    "mdmId": 33345678912,
+                    "maintenanceCardType": 53,
+                    "maintenanceCardNumber": 123458466178945,
+                    "upcomingMaintenanceDate": "2020-01-01T00:00:00.000Z",
+                    "vehicleDocument": {
+                        "countryCode": 643,
+                        "docType": 31,
+                        "docSeries": "77АА",
+                        "docNumber": 123456,
+                        "issueDate": "2019-12-01T00:00:00.000Z",
+                        "licensePlate": "Н714РХ73",
+                        "vin": "4T1BE30K12U058669",
+                        "bodyNumber": "ASV71",
+                        "chassisNumber": "DF4464646FG77",
+                        "vehicleType": 4,
+                        "vehicleCategory": 2,
+                        "writtenMake": "Шевролет",
+                        "writtenModel": "Лачеттино",
+                        "modification": 6.04532554883795e+23,
+                        "productionYear": 2002,
+                        "powerHp": 33,
+                        "maxAllowedWeight": 4000
+                    }
+                },
+                "parties": [
+                    {
+                        "partyType": "Person",
+                        "partyRoles": [
+                            "Driver",
+                            "PolicyHolder",
+                            "Owner"
+                        ],
+                        "person": {
+                            "mdmId": 13467985,
+                            "inn": 644901371115,
+                            "snils": "112233445 95",
+                            "phone": "8(903)6400102",
+                            "email": "example@mail.com",
+                            "badHistoryBasis": 12,
+                            "kbmValue": 1,
+                            "kbmRequestId": "1314c26c-e791-4855-9eaa-cdfe6220f27b",
+                            "identityCard": {
+                                "docType": 12,
+                                "countryCode": 643,
+                                "docSeries": 6119,
+                                "docNumber": 898989,
+                                "issueDate": "2018-12-01T00:00:00.000Z",
+                                "lastName": "Маркова",
+                                "firstName": "Наталья",
+                                "middleName": "Ивановна",
+                                "birthDate": "1990-01-01T00:00:00.000Z",
+                                "address": "г.Москва, пр-кт Ленина, д.4, кв.37",
+                                "addressFias": "0e8a15ac-7066-46eb-807c-af52c74b7190"
+                            },
+                            "driverLicense": {
+                                "docType": 22,
+                                "docSeries": 5004,
+                                "docNumber": 123456,
+                                "issueDate": "2016-12-10T00:00:00.000Z",
+                                "countryCode": 643,
+                                "lastName": "Петрова",
+                                "firstName": "Наталья",
+                                "middleName": "Ивановна",
+                                "birthDate": "1990-01-01T00:00:00.000Z",
+                                "firstLicensedDate": "2018-12-10T00:00:00.000Z",
+                                "drivingExperience": 1
+                            }
+                        }
+                    },
+                    {
+                        "partyType": "Person",
+                        "partyRoles": [
+                            "Driver"
+                        ],
+                        "person": {
+                            "mdmId": 13467988,
+                            "kbmValue": 1,
+                            "kbmRequestId": "1314c26c-e791-4855-9eaa-cdfe6220f88b",
+                            "driverLicense": {
+                                "docSeries": 5003,
+                                "docNumber": 321456,
+                                "issueDate": "2011-12-10T00:00:00.000Z",
+                                "countryCode": 643,
+                                "lastName": "Петров",
+                                "firstName": "Николай",
+                                "middleName": "Иванович",
+                                "birthDate": "1985-01-01T00:00:00.000Z",
+                                "firstLicensedDate": "2011-12-10T00:00:00.000Z",
+                                "drivingExperience": 8
+                            }
+                        }
+                    }
+                ]
+            },
+            "egarantContractData": {
+                "insurerId": 0,
+                "paymentTransactionId": 12346,
+                "paymentDate": "2019-12-01T00:00:00.000Z"
+            },
+            "documentsCheckData": {
+                "insurerId": 0,
+                "insurerCheckInfo": {
+                    "checkId": "3585c474-a817-4f58-a559-51161e54d5d1",
+                    "mdmId": 13467985,
+                    "fileRefs": [
+                        "1235c474-a817-4f58-a559-51161e54d5d2"
+                    ]
+                },
+                "vehicleOwnerCheckInfo": {
+                    "checkId": "3585c474-a817-4f58-a559-51161e54d5d3",
+                    "mdmId": 13467985,
+                    "fileRefs": [
+                        "1235c474-a817-4f58-a559-51161e54d5d3"
+                    ]
+                },
+                "vehicleCheckInfo": {
+                    "checkId": "3585c474-a817-4f58-a559-51161e54d5d4",
+                    "mdmId": 13467987,
+                    "fileRefs": [
+                        "1235c474-a817-4f58-a559-51161e54d5d4"
+                    ]
+                },
+                "driverCheckInfo": [
+                    {
+                        "checkId": "3585c474-a817-4f58-a559-51161e54d5d7",
+                        "mdmId": 13467985,
+                        "fileRefs": [
+                            "1235c474-a817-4f58-a559-51161e54d5d7"
+                        ]
+                    },
+                    {
+                        "checkId": "3585c474-a817-4f58-a559-51161e54d5d5",
+                        "mdmId": 13467988,
+                        "fileRefs": [
+                            "1235c474-a817-4f58-a559-51161e54d5d5"
+                        ]
+                    }
+                ],
+                "maintenanceCardCheckInfo": {
+                    "checkId": "3585c474-a817-4f58-a559-51161e54d5d6",
+                    "fileRefs": [
+                        "1235c474-a817-4f58-a559-51161e54d5d6"
+                    ]
+                }
+            }
+        }
+    }
+}
